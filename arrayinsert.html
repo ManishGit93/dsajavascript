@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Insert Array</title>
+</head>
+<script>
+    let data = [10, 11, 13, 14, 15, 16];
+    let newEl = 12;
+    let position = 2;
+    document.write(`The old array before Insertion ${data} <br>`)
+
+    for (let i = data.length - 1; i > 0; i--) {
+        if (i >= position) {
+            data[i + 1] = data[i];
+            if (i == position) {
+                data[i] = newEl;
+            }
+        }
+    }
+    document.write(`The new array after insertion ${data}<br>`)
+
+    function insertEl() {
+        let newdata = [10, 20, 40, 50, 70, 80];
+        let newEl = document.getElementById("newEl").value;
+        let position = document.getElementById("position").value;
+
+        document.write(`This is old Array ${newdata} <br>`);
+
+        for (let j = newdata.length - 1; j >= 0; j--) {
+            if (j >= position) {
+                newdata[j + 1] = newdata[j];
+                if (j == position) {
+                    newdata[i] = newEl;
+                }
+            }
+        }
+        document.write(`New Array with dynamic Insertion ${newdata} <br>`)
+    }
+
+
+</script>
+
+<body>
+    <input type="text" id="position" placeholder="Enter position" />
+    <input type="text" id="newEl" placeholder="enter new Element" />
+    <button onclick="insertEl()">Insert</button>
+</body>
+
+</html>

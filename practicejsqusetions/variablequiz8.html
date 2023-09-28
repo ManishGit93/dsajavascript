@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (var i = 0; i < 3; i++) {
+            setTimeout(() => console.log(i), 1)
+        }
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => console.log(i), 1)
+        }
+    </script>
+    // output for var case is three times 3 because in var the variable becomes global variable which execute outside
+    the block till loop is stop when loop is stop then it enters in its own scope so it gives output three times 3
+
+    ///but in case of let its has blocked scope so its enters its scope when loop is executed so output is 0 1 2
+</body>
+
+</html>

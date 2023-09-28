@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+<script>
+    let data = [10, 9, 12, 78, 11, 45, 72]
+    for (let i = 0; i < data.length; i++) {
+        document.write(`Array ${i} is ${data[i]} <br>`)
+    }
+    function getElement() {
+        let el = document.getElementById("element").value
+        if (el < data.length && typeof parseInt(el) === "number" && el >= 0) {
+            alert(data[el])
+        }
+        else {
+            alert("Please Enter valid input")
+        }
+    }
+</script>
+
+<body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get Element</button>
+</body>
+
+</html>
